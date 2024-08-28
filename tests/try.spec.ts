@@ -6,6 +6,7 @@ test.describe("Api testing", ()=>{
         const response = await request.get(`${baseUrl.URL}api/users/2`)
         const responsebody = JSON.parse(await response.text())
 
+        //assertions
         expect(response.status()).toBe(200)
         expect(responsebody.data.id).toBe(2)
         expect(responsebody.data.first_name).toBe('Janet')
